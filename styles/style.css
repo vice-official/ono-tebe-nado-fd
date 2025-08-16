@@ -1,12 +1,18 @@
-header {
+.header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    margin: 0;
-    height: 293px;
+    margin: 0;    
 }
 
-.navigation {
+.header__logo {
+    height: 105px;
+    width: 130px;
+    margin-top: 92px;
+    margin-bottom: 96px;
+}
+
+.header__links-list {
     display: flex;
     gap: 32px;
     margin-left: 50px;
@@ -16,45 +22,30 @@ header {
     list-style: circle;
 }
 
-.navigation-first-elem {
-    display: block;
+.header__links-list-item_no-bullit {
+    list-style: none;
 }
 
-header .navigation .underlined {
-    color: inherit;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
+.header__link {
+    text-underline-offset: 4px;
 }
 
-.phone {
-    font-style: normal;
+.header__link_active {
     text-decoration: none;
-    color: inherit;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    display: inline-block;
 }
 
-.header__logo {
-    height: 105px;
-    width: 130px;
-}
-
-.header__logo-image {
-    max-width: 100%;
-    max-height: 100%;
-    
-}
-
-.mail {
+.address__link {
     font-style: normal;
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    display: inline-block;
+    text-underline-offset: 4px;
+    display: inline-block
 }
 
+.address__text {
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    font-style: normal;
+}
 
 header address {
     margin-right: 50px;
@@ -63,6 +54,10 @@ header address {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.address__text {
+
 }
 
 address > p {
@@ -93,30 +88,37 @@ address > p {
 
 .cover__title {
     position: relative;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 700;
-    font-size: 100px;
-    letter-spacing: 0.3em;
     z-index: 1;
     max-width: 100%;
     padding-inline: 50px;
+    padding-top: 165px;
+
+}
+
+.cover__title h1 {
+    font-size: 100px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 .aligned-text_left {
+    display: block;
     text-align: left;
-    margin: 0;
 
 }
 
 .aligned-text_center {
+    display: block;
     text-align: center;
-    margin: 0;
+    margin-top: 20px;
 }
 
 .aligned-text_right {
+    display: block;
     text-align: right;
-    margin: 0;
+    margin-top: 20px;
+    margin-right: -0.3em;
 }
 
 .description {
@@ -126,6 +128,7 @@ address > p {
     justify-content: space-between;
     font-size: 22px;
     margin-inline: 50px;
+    margin-top: 106px;
 
 }
 
@@ -140,12 +143,11 @@ address > p {
     color: #fff;
     border: 1px solid #fff;
     background-color: transparent;
-    width: 256px;
-    height: 51px;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 22px;
-
+    cursor: pointer;
+    padding: 12px 32px;
 }
 
 button:focus {
@@ -178,7 +180,6 @@ button:focus {
 
 .lots__card-list-item {
     width: 334px;
-    min-height: 596px;
 }
 
 .card-link {
@@ -187,59 +188,33 @@ button:focus {
 }
 
 .card {
+    padding: 48px 40px;
     position: relative;
     width: 334px;
-    height: 596px;
+    min-height: 596px;
     color: #fff;
     display: flex;
     flex-direction: column;
-    z-index: -1;
-}
-
-.lots__card-list-item .overlay {
-    padding: 48px 40px;
-    position: absolute;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
     z-index: 0;
-
+    background-size: cover;
+    background-position: center;
 }
 
 .card_type_film {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
     background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-position: center;
 
 }
 
 .card_type_book {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .card_type_picture {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
     background-image: url(../images/card-lot-03.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 334px;
 }
 
 .card__title {
-    margin: 0;
     display: inline-block;
     text-decoration: underline;
     font-weight: 700;
@@ -289,7 +264,7 @@ button:focus {
 .about__logo {
     height: 240px;
     width: 240px;
-    border-radius: 100%;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,7 +278,6 @@ button:focus {
 }
 
 .about__title {
-    min-height: 240px;
     text-transform: uppercase;
     font-size: 40px;
     font-weight: 700;
@@ -316,15 +290,11 @@ button:focus {
     font-size: 20px;
     line-height: 24px;
     letter-spacing: 0;
+    margin-bottom: 24px;
 }
 
 .about__paragraph:first-of-type {
-    margin-top: 8px;
-}
-
-.about__paragraph:last-of-type {
-    margin-bottom: 0;
-    margin-top: 24px;
+    margin-top: 100px;
 }
 
 footer {
@@ -335,37 +305,12 @@ footer {
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    min-height: 180px;
 }
 
 footer > address {
     display: flex;
     flex-direction: column;
     margin-left: 50px;
-}
-
-.address .phone {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    display: inline-block;
-    font-style: normal;
-}
-
-.address .mail {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    display: inline-block;
-    font-style: normal;
-}
-
-.address .address {
-    text-decoration: none;
-    color: inherit;
-    font-style: normal;
 }
 
 .footer__menu {
@@ -378,6 +323,7 @@ footer > address {
     padding: 0;
     list-style: none;
     margin-top: 0;
+    margin-bottom: 115px;
 }
 
 .footer__menu-list-item {
@@ -385,16 +331,14 @@ footer > address {
     text-align: center;
 }
 
-.footer__menu-link {
+.footer__menu-link_active {
     text-decoration: none;
-    color: inherit;
 }
 
-.footer__menu-link-underlined {
-    text-decoration: none;
+.footer__menu-link {
+    text-decoration: underline;
     color: inherit;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
+    text-underline-offset: 4px;
     display: inline-block;
 }
 
