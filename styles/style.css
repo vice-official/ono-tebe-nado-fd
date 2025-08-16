@@ -6,18 +6,17 @@ header {
     height: 293px;
 }
 
-header .navigation {
+.navigation {
     display: flex;
-    gap: 13px;
-    list-style: none;
+    gap: 32px;
     margin-left: 50px;
     padding: 0;
     font-weight: 400;
     font-size: 18px;
+    list-style: circle;
 }
 
 header .navigation .underlined {
-    text-decoration: none;
     color: inherit;
     border-bottom: 1px solid currentColor;
     padding-bottom: 2px;
@@ -162,6 +161,7 @@ button:focus {
     font-size: 40px;
     margin-left: 64px;
     text-transform: uppercase;
+    margin-bottom: 27px;
 }
 
 .lots__card-list {
@@ -310,12 +310,20 @@ button:focus {
     align-items: center;
 }
 
+.about__paragraph {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0;
+}
+
 .about__paragraph:first-of-type {
     margin-top: 8px;
 }
 
 .about__paragraph:last-of-type {
     margin-bottom: 0;
+    margin-top: 24px;
 }
 
 footer {
