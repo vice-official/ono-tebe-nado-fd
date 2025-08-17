@@ -322,7 +322,6 @@ footer > address {
 
 .footer__social-list {
   margin-left: auto;
-  justify-self: end;
   display: flex;
   align-items: flex-start;
   list-style: none;
