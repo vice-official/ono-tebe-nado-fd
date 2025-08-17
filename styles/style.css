@@ -291,25 +291,26 @@ button:focus {
 }
 
 footer {
-    margin-top: 180px;
-    color: black;
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    padding-bottom: 82px;
+    align-items: start;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 82px;
 }
 
 footer > address {
     margin-left: 50px;
-    max-width: 255px;
+    margin-right: auto;
 }
 
 .footer__menu {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
+    justify-self: center;
+}
+
+.footer__social-list {
+    margin-left: auto;
+    justify-self: end; 
 }
 
 .footer__menu-list {
