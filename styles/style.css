@@ -36,6 +36,9 @@
 
 .address__link {
     font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
     text-underline-offset: 4px;
     display: inline-block
 }
@@ -45,6 +48,7 @@
     font-size: 18px;
     text-decoration: none;
     font-style: normal;
+    line-height: 24px;
 }
 
 address {
@@ -54,6 +58,11 @@ address {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+header address {
+    align-self: flex-start;
+    margin-top: 100px;
 }
 
 address > p {
@@ -108,6 +117,7 @@ address > p {
     display: block;
     text-align: center;
     margin-top: 20px;
+    margin-left: 40px;
 }
 
 .aligned-text_right {
