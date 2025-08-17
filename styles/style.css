@@ -297,7 +297,8 @@ footer {
     grid-template-columns: 1fr min-content 1fr;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;;
+    line-height: 24px;
+    padding-bottom: 82px;
 }
 
 footer > address {
@@ -315,7 +316,6 @@ footer > address {
     padding: 0;
     list-style: none;
     margin-top: 0;
-    margin-bottom: 115px;
 }
 
 .footer__menu-list-item {
