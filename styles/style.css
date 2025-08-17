@@ -58,7 +58,6 @@
 
 address {
   margin-right: 50px;
-  max-width: 265px;
   justify-self: end;
   display: flex;
   flex-direction: column;
@@ -68,6 +67,7 @@ address {
 header address {
   align-self: flex-start;
   margin-top: 95px;
+  max-width: 240px;
 }
 
 address > p {
@@ -121,6 +121,7 @@ address > p {
   display: block;
   text-align: center;
   padding-top: 20px;
+  margin-left: 30px;
 }
 
 .aligned-text_right {
@@ -312,6 +313,7 @@ footer {
 footer > address {
   margin-left: 50px;
   margin-right: auto;
+  max-width: 265px;
 }
 
 .footer__menu {
